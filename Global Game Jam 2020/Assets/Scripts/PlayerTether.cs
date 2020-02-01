@@ -12,6 +12,9 @@ public class PlayerTether : MonoBehaviour
 
     private Rigidbody2D myRigidBody;
     private Rigidbody2D shipRigidBody;
+    private SpriteRenderer mySprite;
+    private Animator myAnimator;
+
     //private float distanceFromShip;
     //private float currRopeLength;
 
@@ -21,6 +24,8 @@ public class PlayerTether : MonoBehaviour
         transform.position = new Vector2(ship.transform.position.x + 1, ship.transform.position.y);
         myRigidBody = GetComponent<Rigidbody2D>();
         shipRigidBody = GetComponent<Rigidbody2D>();
+        mySprite = GetComponent<SpriteRenderer>();
+        myAnimator = GetComponent<Animator>();
         //float xDiff = Mathf.Pow(ship.transform.position.x - transform.position.x, 2);
         //float yDiff = Mathf.Pow(ship.transform.position.y - transform.position.y, 2);
         //currRopeLength = Mathf.Sqrt(xDiff + yDiff);
@@ -30,21 +35,32 @@ public class PlayerTether : MonoBehaviour
     void Update()
     {
         //allows astronaut to move omnidirectionally but within the bounds of the length of the tether
-        if(Input.GetAxis("Vertical") > 0)
+        if(Input.GetAxisRaw("Vertical") > 0)
         {
             myRigidBody.AddForce(transform.up * moveSpeed);
+            //mySprite.flipY = true;
+            //myAnimator.Play("astroMoving");
         }
-        if(Input.GetAxis("Vertical") < 0)
+        if(Input.GetAxisRaw("Vertical") < 0)
         {
             myRigidBody.AddForce(transform.up * -moveSpeed);
+            //mySprite.flipY = false;
+            //myAnimator.Play("astroMoving");
         }
-        if(Input.GetAxis("Horizontal") < 0)
+        if(Input.GetAxisRaw("Horizontal") < 0)
         {
             myRigidBody.AddForce(transform.right * -moveSpeed);
+            //myAnimator.Play("astroMoving");
         }
-        if(Input.GetAxis("Horizontal") > 0)
+        if(Input.GetAxisRaw("Horizontal") > 0)
         {
             myRigidBody.AddForce(transform.right * moveSpeed);
+
+            //myAnimator.Play("astroMoving");
+        }
+        else
+        {
+            myAnimator.Play("astroIdle");
         }
         //if(distanceFromShip >= ropeLength)
         //{
