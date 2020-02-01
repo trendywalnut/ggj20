@@ -324,6 +324,11 @@ MonoBehaviour:
   whatTheRopeIsConnectedTo: {fileID: 1194516578}
   whatIsHangingFromTheRope: {fileID: 1699432501}
   allRopeSections: []
+  ropeLength: 0
+  minRopeLength: 0
+  maxRopeLength: 0
+  winchSpeed: 0
+  scalar: 0
 --- !u!231 &947089026
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -454,7 +459,7 @@ PrefabInstance:
     - target: {fileID: 2917496673202561150, guid: 7180124ec9cceb548bb55d247e97b84b,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.723
       objectReference: {fileID: 0}
     - target: {fileID: 2917496673202561150, guid: 7180124ec9cceb548bb55d247e97b84b,
         type: 3}
