@@ -220,6 +220,7 @@ GameObject:
   - component: {fileID: 999892568}
   - component: {fileID: 999892571}
   - component: {fileID: 999892570}
+  - component: {fileID: 999892572}
   m_Layer: 0
   m_Name: TEST_kirby
   m_TagString: Untagged
@@ -326,6 +327,32 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!61 &999892572
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 999892567}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4.65, y: 4.25}
+    newSize: {x: 4.65, y: 4.25}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.65, y: 4.25}
+  m_EdgeRadius: 0
 --- !u!4 &1163289437 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2917496673202561150, guid: 7180124ec9cceb548bb55d247e97b84b,
@@ -345,7 +372,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2007021091}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2da582285470a1745a0d315378334d9a, type: 3}
   m_Name: 
@@ -353,6 +380,11 @@ MonoBehaviour:
   whatTheRopeIsConnectedTo: {fileID: 1163289437}
   whatIsHangingFromTheRope: {fileID: 999892569}
   allRopeSections: []
+  ropeLength: 1
+  minRopeLength: 2
+  maxRopeLength: 7
+  winchSpeed: 4
+  scalar: 2
 --- !u!231 &2007021096
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -360,7 +392,7 @@ SpringJoint2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2007021091}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   m_EnableCollision: 0
   m_ConnectedRigidBody: {fileID: 999892571}
@@ -380,7 +412,7 @@ LineRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2007021091}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -468,6 +500,32 @@ LineRenderer:
     generateLightingData: 0
   m_UseWorldSpace: 1
   m_Loop: 0
+--- !u!61 &2007021098
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2007021091}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 7.28, y: 5.08}
+    newSize: {x: 1.52, y: 2.17}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 7.28, y: 5.08}
+  m_EdgeRadius: 0
 --- !u!1001 &2917496672698729494
 PrefabInstance:
   m_ObjectHideFlags: 0

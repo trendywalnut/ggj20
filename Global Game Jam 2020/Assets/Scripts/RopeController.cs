@@ -16,11 +16,12 @@ public class RopeController : MonoBehaviour
     public List<Vector3> allRopeSections = new List<Vector3>();
 
     //Rope data
-    private float ropeLength = 1f;
-    private float minRopeLength = 1f;
-    private float maxRopeLength = 50f;
+    public float ropeLength;
+    public float minRopeLength;
+    public float maxRopeLength;
     //How fast we add more/less rope
-    float winchSpeed = 5f;
+    public float winchSpeed;
+    public float scalar;
 
     //joint used to approximate the rope
     SpringJoint2D springJoint2D;
@@ -103,16 +104,16 @@ public class RopeController : MonoBehaviour
         bool hasChangedRope = false;
 
         //more rope
-        if (Input.GetKey(KeyCode.X) && ropeLength < maxRopeLength)
+        if (Input.GetKey(KeyCode.JoystickButton2) && ropeLength < maxRopeLength)
         {
             ropeLength += winchSpeed * Time.deltaTime;
 
             hasChangedRope = true;
         }
 
-        else if (Input.GetKey(KeyCode.C) && ropeLength > minRopeLength)
+        else if (Input.GetKey(KeyCode.JoystickButton1) && ropeLength > minRopeLength)
         {
-            ropeLength -= winchSpeed * Time.deltaTime;
+            ropeLength -= scalar * winchSpeed * Time.deltaTime;
 
             hasChangedRope = true;
         }
