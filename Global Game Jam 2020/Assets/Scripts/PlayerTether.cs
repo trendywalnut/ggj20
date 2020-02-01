@@ -20,7 +20,9 @@ public class PlayerTether : MonoBehaviour
     {
         myRigidBody = GetComponent<Rigidbody2D>();
         shipRigidBody = GetComponent<Rigidbody2D>();
-        currRopeLength = 0;
+        float xDiff = Mathf.Pow(ship.transform.position.x - transform.position.x, 2);
+        float yDiff = Mathf.Pow(ship.transform.position.y - transform.position.y, 2);
+        currRopeLength = Mathf.Sqrt(xDiff + yDiff);
     }
 
     // Update is called once per frame
@@ -52,10 +54,15 @@ public class PlayerTether : MonoBehaviour
         {
             currRopeLength += increment;
         }
+
+        
+        //keeps the astronaut within the vicinity of the ship by keeping transform data consistent
+
         //calculates the distance of the astronaut from the ship each frame
         float xDiff = Mathf.Pow(ship.transform.position.x - transform.position.x, 2);
         float yDiff = Mathf.Pow(ship.transform.position.y - transform.position.y, 2);
         distanceFromShip = Mathf.Sqrt(xDiff + yDiff);
+        Debug.Log(currRopeLength);
         Debug.Log(distanceFromShip);
     }
 }
