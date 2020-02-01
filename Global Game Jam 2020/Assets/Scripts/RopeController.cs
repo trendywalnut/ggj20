@@ -50,7 +50,7 @@ public class RopeController : MonoBehaviour
     //Update the spring constant and the length of the spring
     private void UpdateSpring()
     {
-        //springJoint2D.maxDistance = ropeLength;
+        springJoint2D.distance = ropeLength;
 } 
 
     //Display the rope with a line render
