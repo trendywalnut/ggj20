@@ -15,6 +15,7 @@ public class ShipMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        transform.position = new Vector2(5, 35);
         myRigidBody = GetComponent<Rigidbody2D>();
     }
 

@@ -635,7 +635,7 @@ MonoBehaviour:
   asteroid: {fileID: 7340958284013398380, guid: 47528ceb5b956074aae253df14bb8c17,
     type: 3}
   asteroids: []
-  numAsteroids: 0
+  maxAsteroids: 0
   maxXForce: 10
   maxYForce: 10
 --- !u!4 &851684772
