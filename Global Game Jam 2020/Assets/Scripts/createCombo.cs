@@ -31,13 +31,13 @@ public class createCombo : MonoBehaviour
         if (collision.gameObject.tag == "Ship" && hp.CurrentHealth < hp.MaxHealth && !comboPanel.activeSelf)
         {
             comboPanel.SetActive(true);
-            comboPanel.GetComponent<repairCombo>().SetUpGame(_timer, _comboLength);
+            comboPanel.GetComponent<repairCombo>().SetUpGame(_timer, _comboLength, false);
         }
 
         if (collision.gameObject.tag == "Satellite" && !comboPanel.activeSelf)
         {
             comboPanel.SetActive(true);
-            comboPanel.GetComponent<repairCombo>().SetUpGame(_timer, _comboLength);
+            comboPanel.GetComponent<repairCombo>().SetUpGame(_timer, _comboLength, true);
         }
     }
 }

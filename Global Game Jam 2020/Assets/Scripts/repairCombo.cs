@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class repairCombo : MonoBehaviour
 {
@@ -13,15 +14,19 @@ public class repairCombo : MonoBehaviour
     private int current;
     private int comboLength;
     private int currentCombo = 0;
+    private bool satellite = false;
+    private int sceneIndex;
 
-//<<<<<<< HEAD
     public AudioSource shipRepair;
     public AudioSource repairFail;
-//=======
-//>>>>>>> b8a276f6818179f4a50ba14a674b04734ae73df6
 
     public Health heal;
-    
+
+    void Start()
+    {
+        sceneIndex = SceneManager.GetActiveScene().buildIndex;
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -57,15 +62,20 @@ public class repairCombo : MonoBehaviour
         if (currentCombo >= comboLength)
         {
             images[current].fillAmount = 1;
-            print("pog");
             //insert repair
+            if (satellite)
+            {
+                SceneManager.LoadScene(sceneIndex + 1);
+            }
+            else
+            {
+                heal.Repaired();
+                shipRepair.Play();
 
-            heal.Repaired();
-
-            shipRepair.Play();
-
-            heal.CurrentHealth = heal.MaxHealth;
-            gameObject.SetActive(false);
+                heal.CurrentHealth = heal.MaxHealth;
+                gameObject.SetActive(false);
+            }
+ 
         }
         else
         {
@@ -74,27 +84,25 @@ public class repairCombo : MonoBehaviour
             current = Random.Range(0, images.Length);
             if (!fastEnough)
             {
-                print("cheez-nuts");
                 repairFail.Play();
                 //insert die function
 
                 gameObject.SetActive(false);
             }
             else
-            
-                print("nice");
                 currentCombo++;
                 images[current].gameObject.SetActive(true);
     
         }
     }
 
-    public void SetUpGame(float my_timer, int my_comboLength)
+    public void SetUpGame(float my_timer, int my_comboLength, bool isSatellite)
     {
         timer = my_timer;
         comboLength = my_comboLength;
         sorryTimer = Time.time + timer;
         currentCombo = 1;
         images[current].gameObject.SetActive(true);
+        satellite = isSatellite;
     }
 }

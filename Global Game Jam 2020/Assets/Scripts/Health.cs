@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
@@ -85,7 +86,7 @@ public class Health : MonoBehaviour
     void Die()
     {
         CurrentHealth = 0;
-        Debug.Log("cheez-nuts");
+        SceneManager.LoadScene("Game Over Screen");
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
