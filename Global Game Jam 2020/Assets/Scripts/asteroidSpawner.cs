@@ -11,7 +11,8 @@ public class asteroidSpawner : MonoBehaviour
 
 
     private int randSpawn;
-    public int numAsteroids;
+    private int numAsteroids;
+    public int maxAsteroids;
     public int maxXForce;
     public int maxYForce;
 
@@ -19,7 +20,7 @@ public class asteroidSpawner : MonoBehaviour
     void Start()
     {
         Debug.Log("spawn");
-        numAsteroids = Random.Range(2, 13);
+        numAsteroids = Random.Range(2, maxAsteroids + 1);
         startMovement();
 
     }
