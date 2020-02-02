@@ -80,7 +80,7 @@ public class MainMenuController : MonoBehaviour
             if (selectedIndex == 0)
             {
                 //replace with first level scene
-                SceneManager.LoadScene("Mason");
+                SceneManager.LoadScene("Level 1");
             }
             else if (selectedIndex == 1 && !onControls)
             {

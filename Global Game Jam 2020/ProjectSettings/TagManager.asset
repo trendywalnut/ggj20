@@ -6,6 +6,7 @@ TagManager:
   tags:
   - spawnPoint
   - Rooms
+  - Astronaut
   layers:
   - Default
   - TransparentFX

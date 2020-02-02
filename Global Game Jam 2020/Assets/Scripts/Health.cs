@@ -16,6 +16,7 @@ public class Health : MonoBehaviour
     {
         MaxHealth = 1000f;
         CurrentHealth = MaxHealth;
+        isBroken = false;
 
         healthBar.value = CalaculateHealth();
     }
@@ -23,6 +24,7 @@ public class Health : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        healthBar.value = CalaculateHealth();
         DealDamage();
 
         //if (Input.GetKeyDown(KeyCode.Z))
@@ -44,6 +46,7 @@ public class Health : MonoBehaviour
     public void Repaired()
     {
         isBroken = false;
+        CurrentHealth = MaxHealth;
     }
     void Broken()
     {
@@ -51,7 +54,7 @@ public class Health : MonoBehaviour
     }
     void DealDamage ()
     {
-        if (isBroken == true)
+        if (isBroken)
         {
             //CurrentHealth -= damageValue;
             CurrentHealth--;
@@ -76,7 +79,10 @@ public class Health : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Broken();
+        if(collision.gameObject.tag != "Astronaut")
+        {
+            Broken();
+        }
     }
 
     

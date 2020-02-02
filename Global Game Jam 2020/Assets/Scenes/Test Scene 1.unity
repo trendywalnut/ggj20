@@ -761,7 +761,7 @@ MonoBehaviour:
   asteroid: {fileID: 7340958284013398380, guid: 47528ceb5b956074aae253df14bb8c17,
     type: 3}
   asteroids: []
-  numAsteroids: 0
+  maxAsteroids: 0
   maxXForce: 1000
   maxYForce: 1000
 --- !u!4 &851684772
@@ -1623,6 +1623,21 @@ PrefabInstance:
       propertyPath: heal
       value: 
       objectReference: {fileID: 2000265883}
+    - target: {fileID: 6874465300347813868, guid: 7d12e3890e9375d4bbc65cb666be7198,
+        type: 3}
+      propertyPath: m_UiScaleMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6874465301815458152, guid: 7d12e3890e9375d4bbc65cb666be7198,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -212.52501
+      objectReference: {fileID: 0}
+    - target: {fileID: 6874465301815458152, guid: 7d12e3890e9375d4bbc65cb666be7198,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -424.94998
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d12e3890e9375d4bbc65cb666be7198, type: 3}
 --- !u!114 &1501063958 stripped
@@ -1883,26 +1898,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ship
       objectReference: {fileID: 0}
-    - target: {fileID: 114464082667422222, guid: 7180124ec9cceb548bb55d247e97b84b,
-        type: 3}
-      propertyPath: healthBar
-      value: 
-      objectReference: {fileID: 1501063958}
-    - target: {fileID: 231248791932126054, guid: 7180124ec9cceb548bb55d247e97b84b,
-        type: 3}
-      propertyPath: m_Distance
-      value: 1.8179665
-      objectReference: {fileID: 0}
-    - target: {fileID: 231248791932126054, guid: 7180124ec9cceb548bb55d247e97b84b,
-        type: 3}
-      propertyPath: m_ConnectedRigidBody
-      value: 
-      objectReference: {fileID: 1496217353}
-    - target: {fileID: 231248791932126054, guid: 7180124ec9cceb548bb55d247e97b84b,
-        type: 3}
-      propertyPath: m_AutoConfigureDistance
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2917496673202561150, guid: 7180124ec9cceb548bb55d247e97b84b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1982,6 +1977,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Simulated
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114464082667422222, guid: 7180124ec9cceb548bb55d247e97b84b,
+        type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 1501063958}
+    - target: {fileID: 231248791932126054, guid: 7180124ec9cceb548bb55d247e97b84b,
+        type: 3}
+      propertyPath: m_Distance
+      value: 1.8179665
+      objectReference: {fileID: 0}
+    - target: {fileID: 231248791932126054, guid: 7180124ec9cceb548bb55d247e97b84b,
+        type: 3}
+      propertyPath: m_ConnectedRigidBody
+      value: 
+      objectReference: {fileID: 1496217353}
+    - target: {fileID: 231248791932126054, guid: 7180124ec9cceb548bb55d247e97b84b,
+        type: 3}
+      propertyPath: m_AutoConfigureDistance
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114721192379550392, guid: 7180124ec9cceb548bb55d247e97b84b, type: 3}

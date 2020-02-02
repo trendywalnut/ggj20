@@ -7,6 +7,7 @@ public class CameraFollow : MonoBehaviour
     //allows for the correct gameobject that the camera should follow to be set from the inspector
     public Transform trackedObject;
 
+
     //Camera's position is tied to the center of the player's position
     //updates every frame
     void Update()
