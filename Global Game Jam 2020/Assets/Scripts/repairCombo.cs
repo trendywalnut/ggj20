@@ -14,6 +14,7 @@ public class repairCombo : MonoBehaviour
     private int comboLength;
     private int currentCombo = 0;
 
+    public Health heal;
     
     // Update is called once per frame
     void Update()
@@ -44,9 +45,12 @@ public class repairCombo : MonoBehaviour
         images[current].gameObject.SetActive(false);
         if (currentCombo >= comboLength)
         {
-            images[current].fillAmount = 0;
+            images[current].fillAmount = 1;
             print("pog");
             //insert repair
+            //GetComponent<Health>().Repaired();
+
+            heal.Repaired();
 
 
             gameObject.SetActive(false);
@@ -54,7 +58,7 @@ public class repairCombo : MonoBehaviour
         else
         {
             sorryTimer = Time.time + timer;
-            images[current].fillAmount = 0;
+            images[current].fillAmount = 1;
             current = Random.Range(0, images.Length);
             if (!fastEnough)
             {

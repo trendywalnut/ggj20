@@ -19,7 +19,7 @@ public class createCombo : MonoBehaviour
         if(Input.GetKeyDown(startCombo)&& comboPanel.activeSelf == false)
         {
             comboPanel.SetActive(true);
-            comboPanel.GetComponent<Health>().SetUpGame(_timer, _comboLength);
+            comboPanel.GetComponent<repairCombo>().SetUpGame(_timer, _comboLength);
         }
     }
 }
