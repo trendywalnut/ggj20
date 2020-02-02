@@ -29,7 +29,8 @@ public class repairCombo : MonoBehaviour
             //can either do in the long way wit h4 if loops checking each value of Dpad against current value of current
             //or do something short and clever?
             //worst case we switch to bumpers and update the controls graphic
-            if (Input.GetKeyDown(keys[current]))
+            //if (Input.GetKeyDown(keys[current]))
+            if(GetComponent<Dpad>().chooseDpad(current))
             {
                 SetTimer(true);
             }
@@ -98,12 +99,12 @@ public class repairCombo : MonoBehaviour
         public bool downDpadPressed;
         private bool currentlyReleased;
 
-        private void Start()
+        public void Start()
         {
             currentlyReleased = true;
         }
 
-        private void Update()
+        public void Update()
         {
             dpadX = Input.GetAxis("Dpad X");
             dpadY = Input.GetAxis("Dpad Y");
@@ -164,6 +165,30 @@ public class repairCombo : MonoBehaviour
                 currentlyReleased = true;
             }
 
+        }
+
+        public bool chooseDpad(int choice)
+        {
+            if(choice == 0)
+            {
+                return upDpadPressed;
+            }
+            else if(choice == 1)
+            {
+                return downDpadPressed;
+            }
+            else if(choice == 2)
+            {
+                return rightDpadPressed;
+            }
+            else if (choice == 3)
+            {
+                return leftDpadPressed;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }
