@@ -1,4 +1,12 @@
 sceneSetups:
+<<<<<<< HEAD
+- path: Assets/Scenes/Connor.unity
+=======
+<<<<<<< HEAD
+- path: Assets/Scenes/Mason.unity
+=======
 - path: Assets/Scenes/Joseph.unity
+>>>>>>> d879d8917c4122aa0c7546ec1b82110398c8ecdd
+>>>>>>> 66f43c857217f45012750f3446bf63411f146bed
   isLoaded: 1
   isActive: 1
