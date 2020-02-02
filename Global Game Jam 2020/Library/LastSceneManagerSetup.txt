@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/Test Scene 1.unity
+=======
+- path: Assets/Scenes/Endgame Screens.unity
+>>>>>>> 7792a15eb9b04d335add2a626b5b548a9d570995
   isLoaded: 1
   isActive: 1

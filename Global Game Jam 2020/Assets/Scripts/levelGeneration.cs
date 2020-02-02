@@ -142,6 +142,7 @@ public class levelGeneration : MonoBehaviour
             {
                 //Stop level generation
                 stopGeneration = true;
+                aS.createAsteroids(Random.Range(1, aS.maxXForce), Random.Range(1, aS.maxYForce));
             }
 
         }
