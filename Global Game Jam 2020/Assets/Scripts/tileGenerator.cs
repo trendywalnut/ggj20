@@ -63,6 +63,17 @@ public class tileGenerator : MonoBehaviour
 
     }
 
+    public void initPos()
+    {
+        for (int x = 0; x < width; x++)
+        {
+            for (int y = 0; y < height; y++)
+            {
+                terrainMap[x, y] = Random.Range(1, 101) < iniChance ? 1 : 0;
+            }
+        }
+    }
+
     public int[,] genTilePos(int[,] oldMap)
     {
         int[,] newMap = new int[width, height];
@@ -115,16 +126,7 @@ public class tileGenerator : MonoBehaviour
         return newMap;
     }
 
-    public void initPos()
-    {
-        for(int x = 0; x < width; x++)
-        {
-            for(int y = 0; y < height; y++)
-            {
-                terrainMap[x, y] = Random.Range(1, 101) < iniChance ? 1 : 0; 
-            }
-        }
-    }
+
 
     // Update is called once per frame
     void Update()
