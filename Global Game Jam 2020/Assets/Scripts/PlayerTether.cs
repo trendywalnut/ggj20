@@ -30,19 +30,19 @@ public class PlayerTether : MonoBehaviour
     void Update()
     {
         //allows astronaut to move omnidirectionally but within the bounds of the length of the tether
-        if(Input.GetAxis("Vertical") > 0)
+        if((Input.GetAxis("Vertical") > 0 || Input.GetKey(KeyCode.I)) && !Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.UpArrow))
         {
             myRigidBody.AddForce(transform.up * moveSpeed);
         }
-        if(Input.GetAxis("Vertical") < 0)
+        if((Input.GetAxis("Vertical") < 0 || Input.GetKey(KeyCode.K)) && !Input.GetKey(KeyCode.S) && !Input.GetKey(KeyCode.DownArrow))
         {
             myRigidBody.AddForce(transform.up * -moveSpeed);
         }
-        if(Input.GetAxis("Horizontal") < 0)
+        if((Input.GetAxis("Horizontal") < 0 || Input.GetKey(KeyCode.J)) && !Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.LeftArrow))
         {
             myRigidBody.AddForce(transform.right * -moveSpeed);
         }
-        if(Input.GetAxis("Horizontal") > 0)
+        if((Input.GetAxis("Horizontal") > 0 || Input.GetKey(KeyCode.L)) && !Input.GetKey(KeyCode.D) && !Input.GetKey(KeyCode.RightArrow))
         {
             myRigidBody.AddForce(transform.right * moveSpeed);
         }

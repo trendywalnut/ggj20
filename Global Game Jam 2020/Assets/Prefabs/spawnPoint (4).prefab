@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4029689082386554044}
   - component: {fileID: 4029689082386554041}
   - component: {fileID: 4029689082386554042}
-  - component: {fileID: 4029689082386554043}
+  - component: {fileID: 4636769816637169921}
   m_Layer: 0
   m_Name: spawnPoint (4)
   m_TagString: spawnPoint
@@ -75,7 +75,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!50 &4029689082386554043
+--- !u!50 &4636769816637169921
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -83,7 +83,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4029689082386554045}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
