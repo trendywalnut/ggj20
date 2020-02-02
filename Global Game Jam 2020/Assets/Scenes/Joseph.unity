@@ -488,10 +488,10 @@ MonoBehaviour:
   - {fileID: 639430087}
   - {fileID: 995104844}
   rooms:
-  - {fileID: 5250641624967596176, guid: 22b3328d6de965e498b84f08a7385a4b, type: 3}
-  - {fileID: 2044962216995944286, guid: 4583c7af9be6fa94da65334e1b971a02, type: 3}
-  - {fileID: 7926581345366134507, guid: 83ff6fa679663be4880c096a69fdcc17, type: 3}
-  - {fileID: 1334643078060618743, guid: 75ac2e6e381f2f84c86f9de05801aa14, type: 3}
+  - {fileID: 3102092829879321864, guid: 80c866c61ecf1284083500df81ce1083, type: 3}
+  - {fileID: 481433202640656683, guid: 646bd8b4a4289e54aa4a92efa1908d80, type: 3}
+  - {fileID: 3241197305183613654, guid: f3dc69c71be60d5418e584d79bd9fb63, type: 3}
+  - {fileID: 3598282560799725690, guid: 34ecec35faab1de42a4eea7f626f013b, type: 3}
   moveAmount: 10
   startTimeBtwRoom: 0.1
   minX: 35
@@ -741,7 +741,6 @@ MonoBehaviour:
   asteroid: {fileID: 7340958284013398380, guid: 47528ceb5b956074aae253df14bb8c17,
     type: 3}
   asteroids: []
-  numAsteroids: 3
   maxAsteroids: 13
   maxXForce: 10
   maxYForce: 10
