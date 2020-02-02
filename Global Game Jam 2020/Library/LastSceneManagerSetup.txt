@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Pog.unity
+- path: Assets/Scenes/Mason.unity
   isLoaded: 1
   isActive: 1
