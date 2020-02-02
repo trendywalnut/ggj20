@@ -42,10 +42,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 4029689082386554045}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8133c0b546c4d334197f5184b77ac194, type: 3}
+  m_Script: {fileID: 11500000, guid: 85bbdf19b270ae94c9820f35e7c7544b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  openingDirection: 2
+  whatIsRoom:
+    serializedVersion: 2
+    m_Bits: 256
+  levelGen: {fileID: 0}
 --- !u!61 &4029689082386554042
 BoxCollider2D:
   m_ObjectHideFlags: 0

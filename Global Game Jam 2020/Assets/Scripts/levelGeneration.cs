@@ -20,12 +20,15 @@ public class levelGeneration : MonoBehaviour
 
     public LayerMask room;
 
+    public asteroidSpawner aS;
+
     public bool stopGeneration = false;
 
     private int downCounter;
 
     private void Start()
     {
+
         int randStartingPos = Random.Range(0, startingPositions.Length);
         transform.position = startingPositions[randStartingPos].position;
         Instantiate(rooms[0], transform.position, Quaternion.identity);
