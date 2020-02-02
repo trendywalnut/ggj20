@@ -21,9 +21,9 @@ public class EndgameScreens : MonoBehaviour
 
     IEnumerator TimedScreens()
     {
-        yield return new WaitForSeconds(7);
+        yield return new WaitForSeconds(4);
         myCamera.transform.position = new Vector3(myCamera.transform.position.x + 20, myCamera.transform.position.y, myCamera.transform.position.z);
-        yield return new WaitForSeconds(7);
+        yield return new WaitForSeconds(4);
         SceneManager.LoadScene("Main Menu");
     }
 }
