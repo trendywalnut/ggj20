@@ -14,11 +14,11 @@ public class repairCombo : MonoBehaviour
     private int comboLength;
     private int currentCombo = 0;
 
-<<<<<<< HEAD
+//<<<<<<< HEAD
     public AudioSource shipRepair;
     public AudioSource repairFail;
-=======
->>>>>>> b8a276f6818179f4a50ba14a674b04734ae73df6
+//=======
+//>>>>>>> b8a276f6818179f4a50ba14a674b04734ae73df6
 
     public Health heal;
     
@@ -42,7 +42,7 @@ public class repairCombo : MonoBehaviour
             else
             {
                 print("bruh");
-                shipRepair.Play();
+                repairFail.Play();
                 gameObject.SetActive(false);
             }
         }
@@ -75,6 +75,7 @@ public class repairCombo : MonoBehaviour
             if (!fastEnough)
             {
                 print("cheez-nuts");
+                repairFail.Play();
                 //insert die function
 
                 gameObject.SetActive(false);

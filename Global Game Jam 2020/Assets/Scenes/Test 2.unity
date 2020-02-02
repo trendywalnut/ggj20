@@ -2003,6 +2003,26 @@ PrefabInstance:
       propertyPath: m_AutoConfigureDistance
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2916971384252005817, guid: 7180124ec9cceb548bb55d247e97b84b,
+        type: 3}
+      propertyPath: m_ConnectedRigidBody
+      value: 
+      objectReference: {fileID: 1496217353}
+    - target: {fileID: 2916971384252005817, guid: 7180124ec9cceb548bb55d247e97b84b,
+        type: 3}
+      propertyPath: m_Distance
+      value: 2.2146103
+      objectReference: {fileID: 0}
+    - target: {fileID: 8367058386922421328, guid: 7180124ec9cceb548bb55d247e97b84b,
+        type: 3}
+      propertyPath: whatTheRopeIsConnectedTo
+      value: 
+      objectReference: {fileID: 2000265881}
+    - target: {fileID: 8367058386922421328, guid: 7180124ec9cceb548bb55d247e97b84b,
+        type: 3}
+      propertyPath: whatIsHangingFromTheRope
+      value: 
+      objectReference: {fileID: 1496217352}
     m_RemovedComponents:
     - {fileID: 114721192379550392, guid: 7180124ec9cceb548bb55d247e97b84b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7180124ec9cceb548bb55d247e97b84b, type: 3}
@@ -2050,6 +2070,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d510139a58b68e44a808bb3c9856d6f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthAmount: 1000
   healthBar: {fileID: 1501063958}
 --- !u!120 &2000265887
 LineRenderer:
@@ -2146,26 +2167,6 @@ LineRenderer:
     generateLightingData: 0
   m_UseWorldSpace: 1
   m_Loop: 0
---- !u!231 &2000265888
-SpringJoint2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2000265880}
-  m_Enabled: 1
-  serializedVersion: 4
-  m_EnableCollision: 1
-  m_ConnectedRigidBody: {fileID: 1496217353}
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 0
-  m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0, y: 0}
-  m_AutoConfigureDistance: 0
-  m_Distance: 1.8179665
-  m_DampingRatio: 0
-  m_Frequency: 1
 --- !u!60 &2000265889
 PolygonCollider2D:
   m_ObjectHideFlags: 0
