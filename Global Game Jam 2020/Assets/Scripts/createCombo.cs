@@ -14,7 +14,7 @@ public class createCombo : MonoBehaviour
 
     void Start()
     {
-        hp = GetComponent<Health>();
+        hp = GameObject.Find("Ship").GetComponent<Health>();
     }
 
     void Update()
@@ -28,7 +28,13 @@ public class createCombo : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Astronaut" && hp.CurrentHealth < hp.MaxHealth && !comboPanel.activeSelf)
+        if (collision.gameObject.tag == "Ship" && hp.CurrentHealth < hp.MaxHealth && !comboPanel.activeSelf)
+        {
+            comboPanel.SetActive(true);
+            comboPanel.GetComponent<repairCombo>().SetUpGame(_timer, _comboLength);
+        }
+
+        if (collision.gameObject.tag == "Satellite" && !comboPanel.activeSelf)
         {
             comboPanel.SetActive(true);
             comboPanel.GetComponent<repairCombo>().SetUpGame(_timer, _comboLength);

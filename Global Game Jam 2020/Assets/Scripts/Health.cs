@@ -13,6 +13,8 @@ public class Health : MonoBehaviour
 
     private bool isBroken;
 
+    private bool isAstro;
+
     public Slider healthBar;
     void Start()
     {
@@ -47,8 +49,13 @@ public class Health : MonoBehaviour
 
     public void Repaired()
     {
-        isBroken = false;
-        CurrentHealth = MaxHealth;
+
+        if (isAstro == true)
+        {
+            isBroken = false;
+            CurrentHealth = MaxHealth;
+        }
+       
     }
     void Broken()
     {
@@ -83,9 +90,19 @@ public class Health : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag != "Astronaut")
+        if(collision.gameObject.tag != "Astronaut" && collision.gameObject.tag != "Satellite")
         {
             Broken();
+        }
+
+        if (collision.gameObject.tag == "Astronaut")
+        {
+            isAstro = true;
+        }
+
+        if (collision.gameObject.tag == "Satellite")
+        {
+            isAstro = false;
         }
     }
 
