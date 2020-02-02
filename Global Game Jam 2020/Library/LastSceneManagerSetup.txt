@@ -1,4 +1,10 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/Joseph.unity
   isLoaded: 1
   isActive: 1
+=======
+- path: Assets/Scenes/Test 2.unity
+  isLoaded: 0
+  isActive: 0
+>>>>>>> 0308402c647eb21c79216436836caa6435e8447e
