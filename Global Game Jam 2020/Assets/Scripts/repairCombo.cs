@@ -14,8 +14,11 @@ public class repairCombo : MonoBehaviour
     private int comboLength;
     private int currentCombo = 0;
 
+<<<<<<< HEAD
     public AudioSource shipRepair;
     public AudioSource repairFail;
+=======
+>>>>>>> b8a276f6818179f4a50ba14a674b04734ae73df6
 
     public Health heal;
     
@@ -32,8 +35,7 @@ public class repairCombo : MonoBehaviour
             //can either do in the long way wit h4 if loops checking each value of Dpad against current value of current
             //or do something short and clever?
             //worst case we switch to bumpers and update the controls graphic
-            //if (Input.GetKeyDown(keys[current]))
-            if(GetComponent<Dpad>().chooseDpad(current))
+            if (Input.GetKeyDown(keys[current]))
             {
                 SetTimer(true);
             }
@@ -82,8 +84,8 @@ public class repairCombo : MonoBehaviour
                 print("nice");
                 currentCombo++;
                 images[current].gameObject.SetActive(true);
-            
-        }     
+    
+        }
     }
 
     public void SetUpGame(float my_timer, int my_comboLength)
@@ -93,108 +95,5 @@ public class repairCombo : MonoBehaviour
         sorryTimer = Time.time + timer;
         currentCombo = 1;
         images[current].gameObject.SetActive(true);
-    }
-
-    public class Dpad
-    {
-        private float dpadX;
-        private float dpadY;
-        public bool leftDpadPressed;
-        public bool rightDpadPressed;
-        public bool upDpadPressed;
-        public bool downDpadPressed;
-        private bool currentlyReleased;
-
-        public void Start()
-        {
-            currentlyReleased = true;
-        }
-
-        public void Update()
-        {
-            dpadX = Input.GetAxis("Dpad X");
-            dpadY = Input.GetAxis("Dpad Y");
-
-
-
-            if (dpadX == -1)
-            {
-                leftDpadPressed = true;
-                if (leftDpadPressed && currentlyReleased)
-                {
-                    //Fire events
-
-                    Debug.Log("LEFT");
-                }
-
-                currentlyReleased = false;
-            }
-            if (dpadX == 1)
-            {
-                rightDpadPressed = true;
-                if (rightDpadPressed && currentlyReleased)
-                {
-                    //Fire events
-
-                    Debug.Log("RIGHT");
-                }
-                currentlyReleased = false;
-            }
-            if (dpadY == -1)
-            {
-                downDpadPressed = true;
-                if (downDpadPressed && currentlyReleased)
-                {
-                    //Fire events
-
-                    Debug.Log("DOWN");
-                }
-                currentlyReleased = false;
-            }
-            if (dpadY == 1)
-            {
-                upDpadPressed = true;
-                if (upDpadPressed && currentlyReleased)
-                {
-                    //Fire events
-
-                    Debug.Log("UP");
-                }
-                currentlyReleased = false;
-            }
-            if (dpadY == 0 && dpadX == 0)
-            {
-                upDpadPressed = false;
-                downDpadPressed = false;
-                leftDpadPressed = false;
-                rightDpadPressed = false;
-                currentlyReleased = true;
-            }
-
-        }
-
-        public bool chooseDpad(int choice)
-        {
-            if(choice == 0)
-            {
-                return upDpadPressed;
-            }
-            else if(choice == 1)
-            {
-                return downDpadPressed;
-            }
-            else if(choice == 2)
-            {
-                return rightDpadPressed;
-            }
-            else if (choice == 3)
-            {
-                return leftDpadPressed;
-            }
-            else
-            {
-                return false;
-            }
-        }
     }
 }

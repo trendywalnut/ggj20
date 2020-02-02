@@ -742,117 +742,6 @@ LineRenderer:
     generateLightingData: 0
   m_UseWorldSpace: 1
   m_Loop: 0
---- !u!60 &2007021098
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2007021091}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 7.5, y: 7.5}
-    newSize: {x: 1.52, y: 2.17}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.84, y: -2.19}
-      - {x: 0.91999996, y: -2}
-      - {x: 0.96, y: -1.86}
-      - {x: 1.49, y: -1.8}
-      - {x: 1.5, y: -1.79}
-      - {x: 2.24, y: -1.79}
-      - {x: 2.4199998, y: -1.78}
-      - {x: 2.79, y: -1.77}
-      - {x: 3.25, y: -1.76}
-      - {x: 3.3799999, y: -1.75}
-      - {x: 3.3799999, y: -1.5999999}
-      - {x: 3.3, y: -1.54}
-      - {x: 3.07, y: -1.29}
-      - {x: 2.9399998, y: -1.17}
-      - {x: 2.86, y: -1.1}
-      - {x: 2.72, y: -1}
-      - {x: 2.49, y: -0.78}
-      - {x: 2.31, y: -0.61}
-      - {x: 2.1699998, y: -0.48999998}
-      - {x: 1.81, y: -0.19}
-      - {x: 1.68, y: -0.08}
-      - {x: 1.65, y: -0.07}
-      - {x: 1.41, y: 0.17}
-      - {x: 1.31, y: 0.32}
-      - {x: 1.1999999, y: 0.55}
-      - {x: 1.18, y: 0.78}
-      - {x: 1.16, y: 0.9}
-      - {x: 1.14, y: 1.1}
-      - {x: 1.13, y: 1.2099999}
-      - {x: 1.0699999, y: 1.52}
-      - {x: 1.03, y: 1.73}
-      - {x: 0.91999996, y: 2.01}
-      - {x: 0.89, y: 2.1399999}
-      - {x: 0.81, y: 2.32}
-      - {x: 0.72999996, y: 2.47}
-      - {x: 0.59, y: 2.6499999}
-      - {x: 0.5, y: 2.77}
-      - {x: 0.29999998, y: 2.99}
-      - {x: 0.099999994, y: 3.1699998}
-      - {x: 0.02, y: 3.25}
-      - {x: -0.04, y: 3.25}
-      - {x: -0.12, y: 3.1999998}
-      - {x: -0.32, y: 2.99}
-      - {x: -0.51, y: 2.79}
-      - {x: -0.59999996, y: 2.6599998}
-      - {x: -0.65, y: 2.59}
-      - {x: -0.74, y: 2.49}
-      - {x: -0.85999995, y: 2.24}
-      - {x: -0.90999997, y: 2.12}
-      - {x: -0.95, y: 1.9599999}
-      - {x: -1.03, y: 1.74}
-      - {x: -1.0699999, y: 1.5899999}
-      - {x: -1.1, y: 1.42}
-      - {x: -1.15, y: 1.11}
-      - {x: -1.1899999, y: 0.78999996}
-      - {x: -1.23, y: 0.53}
-      - {x: -1.28, y: 0.39999998}
-      - {x: -1.42, y: 0.19999999}
-      - {x: -1.66, y: -0.049999997}
-      - {x: -1.6899999, y: -0.049999997}
-      - {x: -1.8199999, y: -0.17}
-      - {x: -2.22, y: -0.51}
-      - {x: -2.31, y: -0.59}
-      - {x: -2.81, y: -1.04}
-      - {x: -2.96, y: -1.14}
-      - {x: -3.1799998, y: -1.38}
-      - {x: -3.36, y: -1.56}
-      - {x: -3.3799999, y: -1.61}
-      - {x: -3.3799999, y: -1.6999999}
-      - {x: -3.32, y: -1.77}
-      - {x: -3.26, y: -1.78}
-      - {x: -2.8, y: -1.79}
-      - {x: -2.4299998, y: -1.8}
-      - {x: -2.25, y: -1.81}
-      - {x: -1.51, y: -1.81}
-      - {x: -1.5, y: -1.8199999}
-      - {x: -1.01, y: -1.86}
-      - {x: -0.97999996, y: -1.8499999}
-      - {x: -0.87, y: -2.18}
-      - {x: -0.81, y: -2.23}
-      - {x: -0.59999996, y: -2.25}
-      - {x: -0.26, y: -2.29}
-      - {x: 0.11, y: -2.29}
-      - {x: 0.38, y: -2.27}
-      - {x: 0.66999996, y: -2.25}
-      - {x: 0.82, y: -2.22}
 --- !u!1001 &2917496672698729494
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1019,15 +908,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5414741882723399585, guid: b0ec112fec07a5d4ea687ba4c201bf79,
-        type: 3}
-      propertyPath: m_BodyType
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5414741882723399584, guid: b0ec112fec07a5d4ea687ba4c201bf79,
         type: 3}
       propertyPath: ship
       value: 
       objectReference: {fileID: 2007021091}
+    - target: {fileID: 5414741882723399585, guid: b0ec112fec07a5d4ea687ba4c201bf79,
+        type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b0ec112fec07a5d4ea687ba4c201bf79, type: 3}
