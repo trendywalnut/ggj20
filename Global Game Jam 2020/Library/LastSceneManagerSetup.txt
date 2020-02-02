@@ -1,4 +1,24 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/Main Menu.unity
+=======
+<<<<<<< HEAD
+- path: Assets/Scenes/Test Scene 1.unity
+=======
+<<<<<<< HEAD
+- path: Assets/Scenes/Main Menu.unity
+=======
+<<<<<<< HEAD
+- path: Assets/Scenes/Connor.unity
+=======
+<<<<<<< HEAD
+- path: Assets/Scenes/Mason.unity
+=======
+- path: Assets/Scenes/Joseph.unity
+>>>>>>> d879d8917c4122aa0c7546ec1b82110398c8ecdd
+>>>>>>> 66f43c857217f45012750f3446bf63411f146bed
+>>>>>>> e63a206a0d576d8d80bae6b3f73d743435a6bd7f
+>>>>>>> 2eddc88eb9ef7c9db5d9c5acc0853d7d56699de0
+>>>>>>> 55c843faa6d420aa766e77fcd0ddcd78f8cbe399
   isLoaded: 1
   isActive: 1

@@ -47,6 +47,8 @@ public class repairCombo : MonoBehaviour
             images[current].fillAmount = 0;
             print("pog");
             //insert repair
+
+
             gameObject.SetActive(false);
         }
         else
