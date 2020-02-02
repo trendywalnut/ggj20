@@ -11,6 +11,7 @@ public class ShipMovement : MonoBehaviour
 
     private Rigidbody2D myRigidBody;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -34,5 +35,5 @@ public class ShipMovement : MonoBehaviour
         {
             transform.Rotate(0, 0, -turnSpeed * Time.deltaTime);
         }
-    }
+    }  
 }

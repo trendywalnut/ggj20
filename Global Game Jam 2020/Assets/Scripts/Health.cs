@@ -5,13 +5,7 @@ using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
-    public Image[] images;
-    public KeyCode[] keys;
-    private float timer;
-    private float sorryTimer = 0;
-    private int current;
-    private int comboLength;
-    private int currentCombo = 0;
+   
     public float CurrentHealth { get; set; }
     public float MaxHealth { get; set; }
 
@@ -22,6 +16,7 @@ public class Health : MonoBehaviour
     {
         MaxHealth = 1000f;
         CurrentHealth = MaxHealth;
+        isBroken = false;
 
         healthBar.value = CalaculateHealth();
     }
@@ -29,6 +24,7 @@ public class Health : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        healthBar.value = CalaculateHealth();
         DealDamage();
 
         //if (Input.GetKeyDown(KeyCode.Z))
@@ -42,29 +38,15 @@ public class Health : MonoBehaviour
         //    Repaired();
         //}
 
-        if (Time.time > sorryTimer)
-        {
-            SetTimer(false);
-        }
-        if (Input.anyKeyDown)
-        {
-            if (Input.GetKeyDown(keys[current]))
-            {
-                SetTimer(true);
-            }
-            else
-            {
-                print("bruh");
-                gameObject.SetActive(false);
-            }
-        }
+        
+        
 
-        images[current].fillAmount = (sorryTimer - Time.time) / timer;
     }
 
-    void Repaired()
+    public void Repaired()
     {
         isBroken = false;
+        CurrentHealth = MaxHealth;
     }
     void Broken()
     {
@@ -72,7 +54,7 @@ public class Health : MonoBehaviour
     }
     void DealDamage ()
     {
-        if (isBroken == true)
+        if (isBroken)
         {
             //CurrentHealth -= damageValue;
             CurrentHealth--;
@@ -92,51 +74,18 @@ public class Health : MonoBehaviour
     void Die()
     {
         CurrentHealth = 0;
-        Debug.Log("cheez nuts");
+        Debug.Log("cheez-nuts");
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Broken();
-    }
-
-    public void SetTimer(bool fastEnough)
-    {
-        images[current].gameObject.SetActive(false);
-        if (currentCombo >= comboLength)
+        if(collision.gameObject.tag != "Astronaut")
         {
-            images[current].fillAmount = 0;
-            print("pog");
-            //insert repair
-            Repaired();
-
-            gameObject.SetActive(false);
-        }
-        else
-        {
-            sorryTimer = Time.time + timer;
-            images[current].fillAmount = 0;
-            current = Random.Range(0, images.Length);
-            if (!fastEnough)
-            {
-                print("cheez-nuts");
-                //insert die function
-                gameObject.SetActive(false);
-            }
-            else
-
-                print("nice");
-            currentCombo++;
-            images[current].gameObject.SetActive(true);
-
+            Broken();
         }
     }
-    public void SetUpGame(float my_timer, int my_comboLength)
-    {
-        timer = my_timer;
-        comboLength = my_comboLength;
-        sorryTimer = Time.time + timer;
-        currentCombo = 1;
-        images[current].gameObject.SetActive(true);
-    }
+
+    
+    
+    
 }
