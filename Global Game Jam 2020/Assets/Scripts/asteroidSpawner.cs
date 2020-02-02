@@ -9,6 +9,7 @@ public class asteroidSpawner : MonoBehaviour
     public GameObject asteroid;
     public List<GameObject> asteroids;
 
+
     private int randSpawn;
     public int numAsteroids;
     public int maxXForce;
@@ -18,27 +19,27 @@ public class asteroidSpawner : MonoBehaviour
     void Start()
     {
         Debug.Log("spawn");
+        numAsteroids = Random.Range(2, 13);
+        startMovement();
 
-        numAsteroids = Random.Range(2, 9);
+    }
 
+    public void createAsteroids(int initialXVelocity, int initialYVelocity)
+    {
         for (int i = 0; i < numAsteroids; i++)
         {
             randSpawn = Random.Range(0, 16);
-            Instantiate(asteroid, spawners[randSpawn].position, Quaternion.identity);
+            GameObject dummy = Instantiate(asteroid, spawners[randSpawn].position, Quaternion.identity);
+            print(dummy.GetComponent<Rigidbody2D>().velocity);
+            dummy.GetComponent<Rigidbody2D>().velocity = new Vector2(Random.Range(-initialXVelocity, initialXVelocity + 1), Random.Range(-initialYVelocity, initialYVelocity + 1));
             asteroids.Add(asteroid);
         }
-
-        startMovement();
-
     }
 
     public void startMovement()
     {
         print("startMovement");
-        foreach (GameObject gameObject in asteroids)
-        {
-            gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(200, 200));
-        }
+
     }
 
     // Update is called once per frame
