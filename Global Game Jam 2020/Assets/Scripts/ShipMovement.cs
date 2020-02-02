@@ -11,6 +11,7 @@ public class ShipMovement : MonoBehaviour
 
     private Rigidbody2D myRigidBody;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,18 +22,18 @@ public class ShipMovement : MonoBehaviour
     void Update()
     {
         //move in the direction the ship is pointing at the current speed specified by moveSpeed
-        if (Input.GetKey(KeyCode.JoystickButton0))
+        if (Input.GetKey(KeyCode.JoystickButton0) || Input.GetKey(KeyCode.Space))
         {
             myRigidBody.AddForce(transform.up * moveSpeed);
         }
         //Rotates along the Z-axis (positively or negatively) depending on key pressed
-        else if (Input.GetAxis("ShipTurnLeft") > 0)
+        else if (Input.GetAxis("ShipTurnLeft") > 0 || Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.LeftArrow))
         {
             transform.Rotate(0, 0, turnSpeed * Time.deltaTime);
         }
-        else if (Input.GetAxis("ShipTurnRight") > 0)
+        else if (Input.GetAxis("ShipTurnRight") > 0 || Input.GetKey(KeyCode.D) && !Input.GetKey(KeyCode.RightArrow))
         {
             transform.Rotate(0, 0, -turnSpeed * Time.deltaTime);
         }
-    }
+    }  
 }

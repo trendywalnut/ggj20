@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
+   
     public float CurrentHealth { get; set; }
     public float MaxHealth { get; set; }
 
@@ -15,6 +16,7 @@ public class Health : MonoBehaviour
     {
         MaxHealth = 1000f;
         CurrentHealth = MaxHealth;
+        isBroken = false;
 
         healthBar.value = CalaculateHealth();
     }
@@ -22,23 +24,29 @@ public class Health : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        healthBar.value = CalaculateHealth();
         DealDamage();
 
-        if (Input.GetKeyDown(KeyCode.Z))
-        {
+        //if (Input.GetKeyDown(KeyCode.Z))
+        //{
 
-            Broken();
+        //    Broken();
             
-        }
-        if (Input.GetKeyDown(KeyCode.X))
-        {
-            Repaired();
-        }
+        //}
+        //if (Input.GetKeyDown(KeyCode.X))
+        //{
+        //    Repaired();
+        //}
+
+        
+        
+
     }
 
-    void Repaired()
+    public void Repaired()
     {
         isBroken = false;
+        CurrentHealth = MaxHealth;
     }
     void Broken()
     {
@@ -46,7 +54,7 @@ public class Health : MonoBehaviour
     }
     void DealDamage ()
     {
-        if (isBroken == true)
+        if (isBroken)
         {
             //CurrentHealth -= damageValue;
             CurrentHealth--;
@@ -66,6 +74,18 @@ public class Health : MonoBehaviour
     void Die()
     {
         CurrentHealth = 0;
-        Debug.Log("cheez nuts");
+        Debug.Log("cheez-nuts");
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag != "Astronaut")
+        {
+            Broken();
+        }
+    }
+
+    
+    
+    
 }
