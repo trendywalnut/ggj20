@@ -1,6 +1,6 @@
 Win64
 PlayerPath?
-D:/UnityProjects/ggj20/Build/Global Game Jam 2020.exe
+C:/Users/Joseph/Desktop/Unity Projects/ggj20/Global Game Jam 2020/Builds/SPACE GAME !!! (Windows)/Global Game Jam 2020.exe
 SceneListBegin?
 Assets/Scenes/Main Menu.unity
 Assets/Scenes/Level 1.unity

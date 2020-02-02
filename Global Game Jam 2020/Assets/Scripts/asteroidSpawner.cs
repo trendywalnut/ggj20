@@ -29,7 +29,7 @@ public class asteroidSpawner : MonoBehaviour
     {
         for (int i = 0; i < numAsteroids; i++)
         {
-            randSpawn = Random.Range(0, 16);
+            randSpawn = Random.Range(0, spawners.Length);
             GameObject dummy = Instantiate(asteroid, spawners[randSpawn].position, Quaternion.identity);
             print(dummy.GetComponent<Rigidbody2D>().velocity);
             dummy.GetComponent<Rigidbody2D>().velocity = new Vector2(Random.Range(-initialXVelocity, initialXVelocity + 1), Random.Range(-initialYVelocity, initialYVelocity + 1));

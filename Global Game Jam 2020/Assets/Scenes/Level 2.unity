@@ -236,7 +236,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawners:
-  - {fileID: 3821456}
   - {fileID: 544888316}
   - {fileID: 1625921862}
   - {fileID: 196089209}
@@ -335,7 +334,7 @@ SpriteRenderer:
   m_Size: {x: 19.2, y: 10.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &158514023
@@ -1833,7 +1832,7 @@ PrefabInstance:
     - target: {fileID: 6874465301815458152, guid: 7d12e3890e9375d4bbc65cb666be7198,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -243.99998
+      value: -244
       objectReference: {fileID: 0}
     - target: {fileID: 6874465301815458152, guid: 7d12e3890e9375d4bbc65cb666be7198,
         type: 3}
