@@ -14,6 +14,9 @@ public class repairCombo : MonoBehaviour
     private int comboLength;
     private int currentCombo = 0;
 
+    public AudioSource shipRepair;
+    public AudioSource repairFail;
+
     public Health heal;
     
     // Update is called once per frame
@@ -37,6 +40,7 @@ public class repairCombo : MonoBehaviour
             else
             {
                 print("bruh");
+                shipRepair.Play();
                 gameObject.SetActive(false);
             }
         }
@@ -53,9 +57,10 @@ public class repairCombo : MonoBehaviour
             images[current].fillAmount = 1;
             print("pog");
             //insert repair
-            //GetComponent<Health>().Repaired();
 
             heal.Repaired();
+
+            shipRepair.Play();
 
             heal.CurrentHealth = heal.MaxHealth;
             gameObject.SetActive(false);
@@ -69,6 +74,7 @@ public class repairCombo : MonoBehaviour
             {
                 print("cheez-nuts");
                 //insert die function
+
                 gameObject.SetActive(false);
             }
             else

@@ -9,12 +9,14 @@ public class Health : MonoBehaviour
     public float CurrentHealth { get; set; }
     public float MaxHealth { get; set; }
 
+    public float healthAmount = 1000f;
+
     private bool isBroken;
 
     public Slider healthBar;
     void Start()
     {
-        MaxHealth = 1000f;
+        MaxHealth = healthAmount;
         CurrentHealth = MaxHealth;
         isBroken = false;
 
@@ -51,6 +53,8 @@ public class Health : MonoBehaviour
     void Broken()
     {
         isBroken = true;
+        //ship hit
+        GetComponent<AudioSource>().Play();
     }
     void DealDamage ()
     {
