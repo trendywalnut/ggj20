@@ -9,6 +9,7 @@ TagManager:
   - Astronaut
   - Satellite
   - Ship
+  - Asteroid
   layers:
   - Default
   - TransparentFX
