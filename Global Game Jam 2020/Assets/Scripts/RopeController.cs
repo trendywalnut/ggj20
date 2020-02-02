@@ -93,7 +93,7 @@ public class RopeController : MonoBehaviour
         //postions[1] = whatIsHangingFromTheRope.position;
 
         //add the positions to the line renderer
-        lineRenderer.numPositions = positions.Length;
+        lineRenderer.positionCount = positions.Length;
 
         lineRenderer.SetPositions(positions);
     }
