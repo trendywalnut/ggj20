@@ -104,14 +104,14 @@ public class RopeController : MonoBehaviour
         bool hasChangedRope = false;
 
         //more rope
-        if (Input.GetKey(KeyCode.JoystickButton2) && ropeLength < maxRopeLength)
+        if ((Input.GetKey(KeyCode.JoystickButton2) || Input.GetKey(KeyCode.H)) && ropeLength < maxRopeLength)
         {
             ropeLength += winchSpeed * Time.deltaTime;
 
             hasChangedRope = true;
         }
 
-        else if (Input.GetKey(KeyCode.JoystickButton1) && ropeLength > minRopeLength)
+        else if ((Input.GetKey(KeyCode.JoystickButton1) || Input.GetKey(KeyCode.F)) && ropeLength > minRopeLength)
         {
             ropeLength -= scalar * winchSpeed * Time.deltaTime;
 

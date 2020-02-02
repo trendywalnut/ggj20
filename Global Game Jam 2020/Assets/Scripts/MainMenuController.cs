@@ -38,7 +38,7 @@ public class MainMenuController : MonoBehaviour
     {
         //Determines which button is "selected" based on the directional input
         //accounts for wrapping
-        if(Input.GetKeyDown(KeyCode.JoystickButton5))
+        if(Input.GetKeyDown(KeyCode.JoystickButton5) || Input.GetKeyDown(KeyCode.RightArrow))
         {
             selectedIndex++;
             if(selectedIndex == 3)
@@ -46,7 +46,7 @@ public class MainMenuController : MonoBehaviour
                 selectedIndex = 0;
             }
         }
-        else if(Input.GetKeyDown(KeyCode.JoystickButton4))
+        else if(Input.GetKeyDown(KeyCode.JoystickButton4) || Input.GetKeyDown(KeyCode.LeftArrow))
         {
             selectedIndex--;
             if(selectedIndex == -1)
@@ -75,7 +75,7 @@ public class MainMenuController : MonoBehaviour
             quitButton.sprite = quitAlt;
         }
         Debug.Log(selectedIndex);
-        if (Input.GetKeyDown(KeyCode.JoystickButton0))
+        if (Input.GetKeyDown(KeyCode.JoystickButton0) || Input.GetKeyDown(KeyCode.Return))
         {
             if (selectedIndex == 0)
             {
@@ -92,7 +92,7 @@ public class MainMenuController : MonoBehaviour
                 Application.Quit();
             }
         }
-        if(Input.GetKeyDown(KeyCode.JoystickButton1) && selectedIndex == 1)
+        if((Input.GetKeyDown(KeyCode.JoystickButton1) || Input.GetKeyDown(KeyCode.Escape)) && selectedIndex == 1)
         {
             myCamera.transform.position = new Vector3(myCamera.transform.position.x, myCamera.transform.position.y - 1000, myCamera.transform.position.z);
             onControls = false;
