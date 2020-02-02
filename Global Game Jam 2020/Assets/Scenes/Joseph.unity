@@ -742,6 +742,7 @@ MonoBehaviour:
     type: 3}
   asteroids: []
   numAsteroids: 3
+  maxAsteroids: 13
   maxXForce: 10
   maxYForce: 10
 --- !u!4 &851684772
