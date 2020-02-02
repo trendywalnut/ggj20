@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerTether : MonoBehaviour
 {
@@ -12,8 +13,7 @@ public class PlayerTether : MonoBehaviour
 
     private Rigidbody2D myRigidBody;
     private Rigidbody2D shipRigidBody;
-    //private float distanceFromShip;
-    //private float currRopeLength;
+
 
     // Start is called before the first frame update
     void Start()
@@ -21,9 +21,6 @@ public class PlayerTether : MonoBehaviour
         transform.position = new Vector2(ship.transform.position.x + 1, ship.transform.position.y);
         myRigidBody = GetComponent<Rigidbody2D>();
         shipRigidBody = GetComponent<Rigidbody2D>();
-        //float xDiff = Mathf.Pow(ship.transform.position.x - transform.position.x, 2);
-        //float yDiff = Mathf.Pow(ship.transform.position.y - transform.position.y, 2);
-        //currRopeLength = Mathf.Sqrt(xDiff + yDiff);
     }
 
     // Update is called once per frame
@@ -46,24 +43,13 @@ public class PlayerTether : MonoBehaviour
         {
             myRigidBody.AddForce(transform.right * moveSpeed);
         }
-        //if(distanceFromShip >= ropeLength)
-        //{
-        //transform.position = Vector2.Lerp(transform.position, ship.transform.position, .01f);
-        //}
-        //increases tether up to max length specified if button is pressed
-        //if (Input.GetKey(KeyCode.JoystickButton2) && currRopeLength < maxRopeLength)
-        //{
-            //currRopeLength += increment;
-        //}
+    }
 
-        
-        //keeps the astronaut within the vicinity of the ship by keeping transform data consistent
-
-        //calculates the distance of the astronaut from the ship each frame
-        //float xDiff = Mathf.Pow(ship.transform.position.x - transform.position.x, 2);
-        //float yDiff = Mathf.Pow(ship.transform.position.y - transform.position.y, 2);
-        //distanceFromShip = Mathf.Sqrt(xDiff + yDiff);
-        //Debug.Log(currRopeLength);
-        //Debug.Log(distanceFromShip);
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "Asteroid")
+        {
+            SceneManager.LoadScene("Game Over Screen");
+        }
     }
 }
