@@ -21,16 +21,16 @@ public class ShipMovement : MonoBehaviour
     void Update()
     {
         //move in the direction the ship is pointing at the current speed specified by moveSpeed
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.JoystickButton0))
         {
             myRigidBody.AddForce(transform.up * moveSpeed);
         }
         //Rotates along the Z-axis (positively or negatively) depending on key pressed
-        else if (Input.GetKey(KeyCode.A))
+        else if (Input.GetAxis("ShipTurnLeft") > 0)
         {
             transform.Rotate(0, 0, turnSpeed * Time.deltaTime);
         }
-        else if (Input.GetKey(KeyCode.D))
+        else if (Input.GetAxis("ShipTurnRight") > 0)
         {
             transform.Rotate(0, 0, -turnSpeed * Time.deltaTime);
         }
